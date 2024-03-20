@@ -25,7 +25,7 @@ const moviesSlice = createSlice({
         },
         addUpcomingMovies: (state, action) => {
             state.upcomingMovies = action.payload;
-        }
+        },
     },
 });
 

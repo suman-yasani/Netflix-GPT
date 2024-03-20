@@ -8,8 +8,21 @@ export const API_OPTIONS = {
   method: 'GET',
   headers: {
     accept: 'application/json',
-    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyNjY1NWYxNGE5MDZjZTYwNGM0Y2MxODMyMGU3NzcxZSIsInN1YiI6IjY1Y2JhZjgxOGMwYTQ4MDE2M2I3OTJjNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.7rZV0bZGmH-Sw12RGZMEuW9yy10YmtsvwwdI4Uh6wHU'
+    Authorization: 'Bearer ' + process.env.REACT_APP_TMDB_KEY
   }
 };
 
+export const TMDB_SEARCH_URL = 'https://api.themoviedb.org/3/search/movie?query=';
+
 export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w500/";
+
+export const SUPPORTED_LANGUAGES = [
+  {identifier: "en", name: "English"},
+  {identifier: "hi", name: "हिंदी"},
+  {identifier: "te", name: "తెలుగు"},
+  {identifier: "ta", name: "தமிழ்"},
+  {identifier: "ka", name: "ಕನ್ನಡ"},
+  {identifier: "ma", name: "മലയാളം"},
+];
+
+export const OPENAI_KEY = process.env.REACT_APP_OPENAI_KEY;
